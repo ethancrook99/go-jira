@@ -1131,6 +1131,7 @@ func (s *IssueService) SearchWithContext(ctx context.Context, jql string, option
 
 // Search wraps SearchWithContext using the background context.
 func (s *IssueService) Search(jql string, options *SearchOptions) ([]Issue, *Response, error) {
+	fmt.Println("THIS IS ETHAN TEST STRING, MAKE SURE IT LOGS!")
 	return s.SearchWithContext(context.Background(), jql, options)
 }
 
